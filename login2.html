@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <link rel="stylesheet" href="login2.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Teacher Login</h2>
+            <form id="loginForm">
+                <label for="teacherID">Teacher ID:</label>
+                <input type="text" id="teacherID" name="teacherID" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div class="login-photo">
+            <img src="/img/login.jpg"
+                alt="Login Image">
+        </div>
+    </div>
+
+
+
+<!-- script for teacher login -->
+    <script>
+        // script.js
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const teacherID = document.getElementById('teacherID').value;
+            const password = document.getElementById('password').value;
+
+           // login id & password for teacher
+            const teachers = {
+                "teacher1": "password1",
+                "teacher2": "password2",
+                "teacher3": "password3"
+            };
+
+            if (teachers[teacherID] && teachers[teacherID] === password) {
+                alert("Login Successful!");
+                window.location.href = 'index.html';
+            } else {
+                alert("Invalid Teacher ID or Password");
+            }
+        });
+
+    </script>
+</body>
+
+</html>
