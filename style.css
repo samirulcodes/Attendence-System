@@ -102,12 +102,47 @@ button:hover {
     background-color: #2980b9;
 }
 
+
+
 /* Responsive styles for mobile view */
 @media screen and (max-width: 600px) {
-    .container {
-        padding: 10px;
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        align-items: flex-start; /* Align items to the left */
     }
 
+    .navbar-links {
+        margin-top: 10px; /* Add space above links */
+        flex-wrap: wrap; /* Allow wrapping for small screens */
+    }
+
+    .container {
+        padding: 10px;
+        margin: 10px; /* Reduce margin on smaller screens */
+    }
+
+    h2 {
+        font-size: 24px; /* Reduce font size for headings */
+    }
+
+    button {
+        width: 100%; /* Full width buttons */
+        margin: 5px 0; /* Adjust margin */
+    }
+
+    select {
+        padding: 10px; /* Increase padding for better touch targets */
+    }
+
+    li {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: flex-start; /* Align text to the left */
+    }
+
+    strong {
+        margin-bottom: 5px; /* Add space below strong elements */
+        white-space: normal; /* Allow wrapping of text */
+    }
 }
 
 #resultSection {

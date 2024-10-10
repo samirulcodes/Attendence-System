@@ -82,3 +82,43 @@ body {
     padding: 50px;
     border-radius: 8px;
 }
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column; /* Stack items vertically */
+        width: 90%; /* Adjust width for smaller screens */
+    }
+
+    .login-form {
+        width: 100%; /* Full width for form */
+    }
+
+    .login-photo {
+        width: 100%; /* Full width for photo */
+        height: 200px; /* Set a fixed height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #homePage {
+        font-size: 24px; /* Smaller font size for mobile */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#homePage {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 8px;
+}
